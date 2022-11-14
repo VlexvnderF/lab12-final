@@ -1,0 +1,59 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3>Agregar un Contacto</h3>
+  <form action="/contacts/add" method="post">
+
+    {{! nombre Input }}
+    <div class="mb-3">
+      <label for="name">Ingrese el nombre:</label>
+      <input
+        id="name"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="name"
+        placeholder="Nombre"
+        autofocus
+      />
+    </div>
+
+    {{! apellido Input }}
+    <div class="mb-3">
+      <label for="lastname">Apellido:</label>
+      <input
+        
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="lastname"
+        placeholder="Apellido"
+        autofocus
+      />
+    </div>
+
+    {{! age Input }}
+    <div class="mb-3">
+      <label for="age">Edad</label>
+      <input
+        class="form-control rounded-0 bg-dark text-white"
+        name="age"
+        type="number"
+        placeholder="edad"
+      ></input>
+    </div>
+
+
+    {{! Phone Input }}
+    <div class="mb-3">
+      <label for="phone">Celular</label>
+      <input
+        class="form-control rounded-0 bg-dark text-white"
+        name="phone"
+        type="number"
+        placeholder="Número"
+      ></input>
+    </div>
+
+
+    
+
+    <button class="btn btn-primary" type="submit">Add</button>
+  </form>
+</div>

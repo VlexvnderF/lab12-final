@@ -1,0 +1,51 @@
+{{#if contacts}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Telefono</th>
+        <th>Funciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each contacts}}
+        <tr>
+          <td>{{@index}}</td>
+          <td><strong>{{name}}</strong></td>
+          <td>{{lastname}}</td>
+          <td>{{age}}</td>
+          <td>{{phone}}</td>
+          <td>
+            {{#if done}}
+              <a
+                class="btn btn-success"
+                href="/contacts/{{_id}}/toggleDone"
+              >Guardado</a>
+            {{else}}
+              <a class="btn btn-dark" href="/contacts/{{_id}}/toggleDone">
+                No guardado
+              </a>
+            {{/if}}
+            <a href="/contacts/{{_id}}/delete" class="btn btn-danger">
+              Borrar
+            </a>
+            <a href="/contacts/{{_id}}/edit" class="btn btn-info">
+              Editar
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>Sin Contactos</h1>
+      <img src="/icons/empty.svg" class="w-75" />
+    </div>
+
+  </div>
+{{/if}}

@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h1>Actualizar Contacto</h1>
+
+          <form action="/contacts/{{contact._id}}/edit" method="post">
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="name"
+                placeholder="Nombre"
+                value="{{contact.name}}"
+              />
+            </div>
+
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="lastname"
+                placeholder="Apellido"
+                value="{{contact.lastname}}"
+              />
+            </div>
+
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="number"
+                name="age"
+                placeholder="Edad"
+                value="{{contact.age}}"
+              />
+            </div>
+
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="phone"
+                placeholder="Telefono"
+                value="{{contact.phone}}"
+              />
+            </div>
+
+            <button class="btn btn-primary" type="submit">Actualizar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
